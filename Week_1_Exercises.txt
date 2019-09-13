@@ -1,0 +1,25 @@
+Beregningsmæssige Værktøjer til Datavidenskab:
+Uge 1:
+Exercise 1:
+1) Åben git bash
+2) cd ~/work/
+3) cat access.log-sample | awk '{print $1}' | sort -n | sort -nr | wc -l
+
+Svaret er: 350
+
+Exercise 2:
+2.1:
+1) Åben git bash
+2) cd ~/work/
+3) head -1 titanic.csv | sed 's/[^,]//g' | wc -c
+
+svaret er 12
+
+2.2:
+1) grep -c 'FALSE' titanic.csv
+2) grep -c 'TRUE' titanic.csv
+
+svaret er henholdsvis 549 & 342
+
+2.3:
+1) cat titanic.csv | grep -e 'FALSE' | sed -n '1,50p'
